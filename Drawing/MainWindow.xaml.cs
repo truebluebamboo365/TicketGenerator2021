@@ -128,7 +128,7 @@ namespace Drawing
                 }
             }
         }
-        private void PrintingTicket(int ticketNo)
+        private async void PrintingTicket(int ticketNo)
         {
             // Ticket numbers
             string tickNo = String.Format("No. {0}", ticketNo.ToString("D4"));
@@ -144,6 +144,7 @@ namespace Drawing
                 lblTicketNoRight.Content = tickNo;
             });
 
+            await Task.Delay(10);
             // CPU-bound or I/O-bound operation goes outside of Invoke
 
             //lblTicketNoLeft.Content = tickNo;
@@ -191,7 +192,7 @@ namespace Drawing
             }
         }
 
-            private void SaveTicket(int ticketNo)
+            private async void SaveTicket(int ticketNo)
         {
             this.Dispatcher.Invoke(() =>
             {
@@ -207,6 +208,7 @@ namespace Drawing
                     pngImage.Save(fileStream);
                 }
             });
+            await Task.Delay(10);
         }
 
         private static string TableNumbering(int ticketNo)
