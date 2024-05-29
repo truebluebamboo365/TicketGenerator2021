@@ -7,74 +7,199 @@
         mc:Ignorable="d"
         Title="Kengen Water" Height="630" Width="1702"  Foreground="#FFCB00FF" BorderBrush="#FF101011" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" AllowsTransparency="True" WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="Images/Church_background_7.png" TileMode="Tile"/>
+        <ImageBrush ImageSource="Images/Church_background_8.png" TileMode="Tile" Opacity="1"/>
     </Window.Background>
-    <Grid HorizontalAlignment="Left" Height="436" Margin="10,10,0,0" VerticalAlignment="Top" Width="310">
-        <Label x:Name="label" Content="    CỘNG ĐỒNG CÔNG GIÁO VIỆT NAM - NAM ÚC&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="900" FontSize="36" Foreground="#FFFF2800" FontWeight="Bold" Margin="550,2,-1140,0" Height="66"/>
-        <Label x:Name="label1" Content="CỘNG ĐỒNG CÔNG GIÁO&#xD;&#xA;   VIỆT NAM - NAM ÚC" HorizontalAlignment="Left" VerticalAlignment="Top" Height="69" Width="253" Margin="53,17,0,0" FontWeight="Bold" Foreground="#FFFF2800" TextOptions.TextFormattingMode="Display" FontSize="20"/>
-        <Label x:Name="label3" Content="Tickets $30 each" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1460,29,-1351,0" FontSize="24" FontWeight="Bold" Height="54" Width="201" Foreground="#FF4600FF" RenderTransformOrigin="10,20">
-            <Label.RenderTransform>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="371*"></ColumnDefinition>
+            <ColumnDefinition Width="1155*"></ColumnDefinition>
+            <ColumnDefinition Width="176*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="82*"></RowDefinition>
+            <RowDefinition Height="148*"></RowDefinition>
+            <RowDefinition Height="85*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Ellipse Grid.Column="1" Margin="729,15,78,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.486"/>
-                    <TranslateTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
                 </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="314" Margin="27,169,-12,-47" VerticalAlignment="Top" Width="295" Source="Images/Logo.png" RenderTransformOrigin="0.5,0.5" Opacity="0.2">
-        </Image>
-        <Label x:Name="label2_Copy1" Content="VÉ SỐ GÂY QUỸ ĐỂ TRẢ NỢ CHO CHƯƠNG TRÌNH XÂY DỰNG THÁNH&#xD;&#xA;   ĐƯỜNG ĐỨC MẸ THUYỀN NHÂN VÀ HỘI TRƯỜNG THÁNH GIUSE" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="623,90,-1049,0" Foreground="#FFFF2800" Width="736" FontSize="22" Height="73" FontWeight="Bold" Background="{x:Null}"/>
-        <Label x:Name="label6" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xD;&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xD;&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" HorizontalAlignment="Left" Height="622" Margin="364,-8,-70,-178" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
-        <Label x:Name="label2_Copy3" Content="          1st prize:&#xD;&#xA;         2nd prize:&#xD;&#xA;          3rd prize:&#xD;&#xA;10 other prizes:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1313,356,-1166,-41" Foreground="#FF000CFF" Width="163" Height="121" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/Hinh_Chia_Tay.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Grid.Column="1" Margin="899,15,84,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2" >
+            <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.204"/>
-                    <TranslateTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
                 </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblTicketNoLeft" Content="No. 2000" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,518,0,-140" FontSize="36" FontWeight="Bold" Height="58" Width="177" Foreground="#FFD55A0E"/>
-        <Label x:Name="lblTicketNoRight" Content="No. 6999" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="404,518,-293,-142" FontSize="36" FontWeight="Bold" Height="60" Width="199" Foreground="#FFD55A0E"/>
-        <Label x:Name="label2_Copy2" Content="Tên: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,119,-49,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="label2_Copy6" Content="ĐT: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,400,-49,-12" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="label2_Copy7" Content="Draw: 10.30am 14th Feb 2021&#xD;&#xA;Results: published in the &#xD;&#xA;Advertiser 17 Feb 2021" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="379,366,-306,-3" Foreground="#FF3807F9" Width="237" FontSize="16" Height="73" Background="{x:Null}" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy8" Content="ĐC: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,176,-50,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="label2_Copy10" Content="       _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,283,-50,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="label2_Copy11" Content="       _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,337,-50,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="label2_Copy" Content="TERMS AND CONDITIONS: Licence No. M13960 Promoted and conducted by The Vietnamese Catholic &#xA;Community in SA Inc. 2,000 tickets. Draw: 10.30am, 14th February 2021 at 29 South Tce, Pooraka SA 5095.&#xA;Winners notified by telephone within seven days of draw and published in The Advertiser (Public Notices) on &#xA;17th February 2021. Tickets are not transferable and may not be purchased by any person under the age of 15." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="610,493,-1373,-172" Foreground="#FF0E0F23" Width="1073" Height="115" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/TTHN_INSIDE_CHURCH.JPG" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Grid.Column="1" Margin="459,13,348,134" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.204"/>
-                    <TranslateTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
                 </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="label2_Copy4" Content="(The Vietnamese Catholic Community in SA Inc.)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="705,47,-953,0" Foreground="#FFB6275F" Width="558" FontSize="24" Height="43" Background="{x:Null}" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy5" Content="(Charity Draw for the Construction of a new Multi-Purpose Hall and a Church)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="651,152,-1008,0" Foreground="#FFE519D0" Width="667" FontSize="18" Height="43" Background="{x:Null}" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy12" Content="$7,000.00 cash&#xA;$3,000.00 cash&#xA;$1,000.00 cash&#xD;&#xA;   $100.00 cash each" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1476,355,-1370,-45" Foreground="#FFF41908" Width="204" Height="126" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/TTHN_INSIDE_CHURCH.JPG" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Grid.Column="1" Margin="172,15,635,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/TTHN_Play_Group.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBlock Text="  CHƯƠNG TRÌNH THĂNG TIẾN&#xA;HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
+                   FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Margin="0,16,0,0" Width="329"/>
+        <TextBlock Text="CĐCGVN - NAM ÚC&#xA;    TGP ADELAIDE" 
+                   FontSize="20" Foreground="#FF6280C5" FontWeight="Bold" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Margin="80,85,0,0" Width="199"/>
+
+        <Label Grid.Row="1" 
+               Content="Tên: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" 
+               Margin="0,180,0,0" 
+               HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
+        <Label Grid.Row="1" 
+               Content="ĐT: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" 
+               Margin="0,240,0,0" 
+               HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
+
+        <Label Grid.Row="1"
+               Content="$70" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="27,291,0,0" FontSize="30" FontWeight="Bold" Height="46" Width="72" Foreground="#FF659BDF" Grid.Column="1" Grid.RowSpan="2"/>
+
+
+        <Label Grid.Row="2" x:Name="lblTicketNoLeft" 
+               Content="Số vé: 200" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,50,0,0" FontSize="24" FontWeight="Bold" Height="45" Width="136" Foreground="#FFD55A0E"/>
+        <Label Grid.Row="2" x:Name="lblTableNoLeft" 
+               Content="Số bàn: 20" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E"/>
+
+        <Label Grid.Column="1" Grid.Row="2" x:Name="lblTicketNoRight" 
+               Content="Số vé: 200" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="28,50,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
+        <Label Grid.Column="1" Grid.Row="2" x:Name="lblTableNoRight" 
+               Content="Số bàn: 20" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="28,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
+
+        <Label Grid.Column="1" Grid.RowSpan="3" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" 
+               HorizontalAlignment="Left" Height="622" Margin="0,0,0,0" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="2"
+            Text="Một bữa cơm thân mật để gặp gỡ giao lưu tạo thêm tình thân!&#xA;Một chương trình văn nghệ góp vui thật đặc sắc!&#xA;Có phần đấu giá và xổ số may mắn!" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="231,60,0,0" Foreground="#FF7A0829" Width="547" FontSize="18" Height="72" Background="{x:Null}" FontWeight="Bold"/>
+
+
+        <TextBlock Grid.Column="1" 
+                   Text="CHƯƠNG TRÌNH THĂNG TIẾN HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
+                   FontSize="36" Foreground="#FFFF2800" FontWeight="Bold" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="1098" Margin="0,21,0,0"/>
+        <TextBlock Grid.Column="1" 
+           Text="CỘNG ĐỒNG CÔNG GIÁO VIỆT NAM - NAM ÚC - TỔNG GIÁO PHẬN ADELAIDE" 
+           FontSize="22" Foreground="#FF6280C5" FontWeight="Bold" 
+           HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="829" Margin="0,75,0,0"/>
+        <TextBlock Grid.Column="1" 
+           Text="BỮA CƠM GÂY QUỸ NHẰM CÓ THÊM KINH PHÍ ĐỂ TỔ CHỨC TRẠI VÀ MỞ CÁC KHÓA SẮP TỚI" 
+           FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
+           HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="952" Margin="0,114,0,0" RenderTransformOrigin="0.5,1.004"/>
+        <Image x:Name="image1" Grid.Row="1" Grid.Column="0" Source="Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Opacity="0.2"/>
+        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="17,22,1011,22" />
+        <!--<Image x:Name="image3" Grid.Row="1" Grid.Column="1" Source="Images/BDH.jpg" RenderTransformOrigin="0.5,0.5"/>-->
+        <Ellipse Grid.Column="1" Margin="601,15,206,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="Images/TTHN_Play_Group.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBlock Grid.Column="1" Grid.Row="2"
+            Text="Pooraka Memorial Hall - 39 Scott St Pooraka SA 5095&#xA;Thứ Bảy 03-08-2024 Từ 06:30PM - 10:30PM &#xA;Lưu ý: Khi đi nhớ mang theo vé để vào cửa." 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="818,60,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="82" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Ellipse Grid.Column="1" Margin="311,15,496,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/Hinh_Chia_Tay.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Grid.Column="1" Margin="35,15,772,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.67"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-2.82"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/TTHN_Large_Group.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Image x:Name="image2_Copy" Grid.Row="0" Grid.Column="1" Source="/Images/Logo.png" RenderTransformOrigin="0.5,0.5" Margin="1154,34,14,22" Grid.ColumnSpan="2" />
+        <TextBlock Grid.Column="2" Grid.Row="0" 
+           Text="CỘNG ĐỒNG CÔNG GIÁO" 
+           FontSize="12" Foreground="#FF6280C5" FontWeight="Bold" 
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="144" Margin="10,16,0,0" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.204"/>
+                    <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="lblTicketNoLeft_Copy" Content="Licence No. M13960" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,567,0,-170" FontSize="22" FontWeight="Bold" Height="39" Width="226" Foreground="#FF08167C"/>
-        <Label x:Name="lblTicketNoLeft_Copy1" Content="Licence No. M13960" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,567,-293,-170" FontSize="22" FontWeight="Bold" Height="39" Width="218" Foreground="#FF08167C"/>
-        <Label x:Name="label2_Copy13" Content="       _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,229,-51,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="lblTicketNoLeft_Copy2" Content="(Name)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,146,0,0" FontWeight="Bold" Height="32" Width="55" Foreground="#FF08167C"/>
-        <Label x:Name="lblTicketNoLeft_Copy3" Content="(Address)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,204,0,0" FontWeight="Bold" Height="35" Width="73" Foreground="#FF08167C"/>
-        <Label x:Name="lblTicketNoLeft_Copy4" Content="(Phone)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,427,0,-26" FontWeight="Bold" Height="35" Width="73" Foreground="#FF08167C"/>
-        <Label x:Name="lblTicketNoLeft_Copy5" Content="(The Vietnamese Catholic Community in SA Inc.)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,86,-12,0" FontWeight="Bold" Height="29" Width="286" Foreground="#FFF42806"/>
-        <Label x:Name="lblTicketNoLeft_Copy6" Content="To be drawn at 10.30am on 14th February 2021&#xA;Please return counterfoils, payment, cash and &#xA;unsold tickets by 07/Feb/2021&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,453,-53,-84" FontWeight="Bold" Height="67" Width="338" Foreground="#FF1C07E7" FontSize="14"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="0" 
+           Text="VIỆT NAM - NAM ÚC" 
+           FontSize="12" Foreground="#FF6280C5" FontWeight="Bold" 
+           HorizontalAlignment="Center" VerticalAlignment="Top" Height="18" Width="130" Margin="0,140,0,0" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
-
-
 </Window>

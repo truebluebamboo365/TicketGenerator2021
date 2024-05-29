@@ -5,22 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drawing"
         mc:Ignorable="d"
-        Title="ThoiSuBanner" Height="550" Width="1920">
+        Title="Kengen Water" Height="630" Width="1702"  Foreground="#FFCB00FF" BorderBrush="#FF101011" AllowsTransparency="True" WindowStyle="None">
     <Window.Background>
-        <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
-            <LinearGradientBrush.RelativeTransform>
+        <ImageBrush ImageSource="Images/Church_background_7.png" TileMode="Tile"/>
+    </Window.Background>
+
+    <Grid HorizontalAlignment="Left" Height="436" Margin="10,10,0,0" VerticalAlignment="Top" Width="310">
+        <Label x:Name="label" Content="    CỘNG ĐỒNG CÔNG GIÁO VIỆT NAM - NAM ÚC&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="900" FontSize="36" Foreground="#FFFF2800" FontWeight="Bold" Margin="550,2,-1140,0" Height="66"/>
+        <Label x:Name="label1" Content="CỘNG ĐỒNG CÔNG GIÁO&#xD;&#xA;   VIỆT NAM - NAM ÚC" HorizontalAlignment="Left" VerticalAlignment="Top" Height="69" Width="253" Margin="53,17,0,0" FontWeight="Bold" Foreground="#FFFF2800" TextOptions.TextFormattingMode="Display" FontSize="20"/>
+        <Label x:Name="label3" Content="$50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="429,378,-201,0" FontSize="36" FontWeight="Bold" Height="54" Width="82" Foreground="#FFFF00B3" RenderTransformOrigin="10,20">
+            <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform/>
+                    <RotateTransform Angle="0.486"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </LinearGradientBrush.RelativeTransform>
-            <GradientStop Color="#FF2B12C7" Offset="1"/>
-            <GradientStop Color="#FF2B12C7" Offset="0.005"/>
-            <GradientStop Color="#FFB38E57" Offset="0.26"/>
-            <GradientStop Color="#FF9B7C4C" Offset="0.683"/>
-        </LinearGradientBrush>
-    </Window.Background>
-    <Image HorizontalAlignment="Center" Height="477" VerticalAlignment="Top" Width="489" Source="C:\Users\xavier\Documents\Visual Studio 2017\Projects\Drawing\Drawing\Images\Maria Thuy.PNG" Margin="0,19,0,0" Stretch="Fill"/>
+            </Label.RenderTransform>
+        </Label>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="314" Margin="27,115,-12,0" VerticalAlignment="Top" Width="295" Source="Images/Logo.png" RenderTransformOrigin="0.5,0.5" Opacity="0.2">
+        </Image>
+        <Label x:Name="label2_Copy11" VerticalAlignment="Top" Margin="597,58,-1175,0" FontSize="20" Height="45" FontWeight="Bold" Background="{x:Null}" Foreground="#FFFF2800"  Content="CHƯƠNG TRÌNH THĂNG TIẾN HÔN NHÂN GIA ĐÌNH TỔNG GIÁO PHÂN ADELAIDE"/>
+        <Label x:Name="label2_Copy12" Content="BỮA CƠM GÂY QUỸ ĐỂ CÓ THÊM TÀI CHÁNH TRANG TRẢI CHO KỲ TRẠI VÀ CÁC KHÓA SẮP TỚI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="580,105,-1175,0" Foreground="#FFFF2800" Width="968" FontSize="18" Height="93" FontWeight="Bold" Background="{x:Null}"/>
+        <Label x:Name="label6" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xD;&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xD;&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" HorizontalAlignment="Left" Height="622" Margin="348,-8,-54,-178" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
+        <Label x:Name="label2_Copy3" Content="          Chúa Nhật 09-06-2019 Từ 6:30PM - 10:30PM&#xD;&#xA;       Trung Tâm Đức Mẹ Thuyền Nhân  &#xD;&#xA;    Hội Trường Sinh Hoạt Mới&#xA;29 South Tce, Pooraka SA 5095" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1225,479,-1345,-145" Foreground="#FFFF2800" Width="430" Height="102" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.204"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="label2_Copy" Content="CHƯƠNG TRÌNH XÂY DỰNG " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,377,-1350,0" Foreground="#FFCA7C6C" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="lblTicketNoLeft" Content="Số vé: 500" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,451,0,-73" FontSize="36" FontWeight="Bold" Height="58" Width="183" Foreground="#FFD55A0E"/>
+        <Label x:Name="lblTicketNoRight" Content="Số vé: 500" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="386,455,-292,-79" FontSize="36" FontWeight="Bold" Height="60" Width="216" Foreground="#FFD55A0E"/>
+        <Label x:Name="lblTableNoLeft" Content="Số bàn: 50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,514,0,-136" FontSize="36" FontWeight="Bold" Height="58" Width="234" Foreground="#FFD55A0E"/>
+        <Label x:Name="label2_Copy4" Content="HỘI TRƯỜNG SINH HOẠT VÀ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,410,-1350,-11" Foreground="#FFCA7C6C" Width="358" Height="37" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="label2_Copy5" Content="CHỈNH TRANG HỘI TRƯỜNG CHÍNH" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,443,-1326,-43" Foreground="#FFCA7C6C" Width="356" Height="36" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="label3_Copy" Content="$50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="129,380,0,0" FontSize="36" FontWeight="Bold" Height="54" Width="82" Foreground="#FFFF00B3" RenderTransformOrigin="10,20">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.486"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="label2_Copy9" Content="Tên: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,222,-54,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="label2_Copy6" Content="ĐT: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,275,-56,0" Foreground="#FF0E0E0E" Width="350" Height="48" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="label2_Copy7" Content="Lưu ý: Xin nhớ đem theo vé để vào cửa." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1213,571,-1279,-178" Foreground="#FF7A0829" Width="376" FontSize="18" Height="43" Background="{x:Null}" FontWeight="Bold"/>
+        <Label x:Name="lblTableNoRight" Content="Số bàn: 50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="386,513,-318,-137" FontSize="36" FontWeight="Bold" Height="60" Width="242" Foreground="#FFD55A0E"/>
+    </Grid>
 </Window>

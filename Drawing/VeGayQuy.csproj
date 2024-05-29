@@ -119,6 +119,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Images\HolyFamily4" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,6 +169,60 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Church_background_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TTHN Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HolyFamily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HolyFamily2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HolyFamily3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HolyFamily5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Church_background_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BDH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TTHN_Large_Group.jpg" />
+    <Resource Include="Images\TTHN_Play_Group.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TTHN_INSIDE_CHURCH.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Hinh_Chia_Tay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LienGia\Lien_Gia_Anna.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Anton.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Francis.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Gioan.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Martin.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Matthew.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Phaolo.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Phero.jpg" />
+    <Resource Include="Images\LienGia\Lien_Gia_Teresa.jpg" />
+    <Resource Include="Images\Lien_Gia_Trinh_Vuong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Lien_Gia_Anna.jpg" />
+    <Resource Include="Images\Lien_Gia_Anton.jpg" />
+    <Resource Include="Images\Lien_Gia_Francis.jpg" />
+    <Resource Include="Images\Lien_Gia_Gioan.jpg" />
+    <Resource Include="Images\Lien_Gia_Martin.jpg" />
+    <Resource Include="Images\Lien_Gia_Matthew.jpg" />
+    <Resource Include="Images\Lien_Gia_Phaolo.jpg" />
+    <Resource Include="Images\Lien_Gia_Phero.jpg" />
+    <Resource Include="Images\Lien_Gia_Teresa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
