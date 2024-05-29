@@ -20,7 +20,7 @@
             <RowDefinition Height="148*"></RowDefinition>
             <RowDefinition Height="85*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Ellipse Grid.Column="1" Margin="729,15,78,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+        <Ellipse Grid.Column="1" Margin="786,15,21,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,7 +33,7 @@
                 <ImageBrush ImageSource="/Images/Hinh_Chia_Tay.jpg" />
             </Ellipse.Fill>
         </Ellipse>
-        <Ellipse Grid.Column="1" Margin="899,15,84,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2" >
+        <Ellipse Grid.Column="1" Margin="950,15,33,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.ColumnSpan="2" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -46,7 +46,7 @@
                 <ImageBrush ImageSource="/Images/TTHN_INSIDE_CHURCH.JPG" />
             </Ellipse.Fill>
         </Ellipse>
-        <Ellipse Grid.Column="1" Margin="459,13,348,134" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+        <Ellipse Grid.Column="1" Margin="494,13,313,134" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,7 +59,7 @@
                 <ImageBrush ImageSource="/Images/TTHN_INSIDE_CHURCH.JPG" />
             </Ellipse.Fill>
         </Ellipse>
-        <Ellipse Grid.Column="1" Margin="172,15,635,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+        <Ellipse Grid.Column="1" Margin="187,15,620,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -118,20 +118,20 @@
 
         <TextBlock Grid.Column="1" 
                    Text="CHƯƠNG TRÌNH THĂNG TIẾN HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
-                   FontSize="36" Foreground="#FFFF2800" FontWeight="Bold" 
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="1098" Margin="0,21,0,0"/>
+                   FontSize="30" Foreground="#FFFF2800" FontWeight="Bold" 
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="914" Margin="204,22,0,0"/>
         <TextBlock Grid.Column="1" 
-           Text="CỘNG ĐỒNG CÔNG GIÁO VIỆT NAM - NAM ÚC - TỔNG GIÁO PHẬN ADELAIDE" 
-           FontSize="22" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="829" Margin="0,75,0,0"/>
+           Text="TỔNG GIÁO PHẬN ADELAIDE" 
+           FontSize="26" Foreground="#FF6280C5" FontWeight="Bold" 
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="426" Margin="448,73,0,0"/>
         <TextBlock Grid.Column="1" 
            Text="BỮA CƠM GÂY QUỸ NHẰM CÓ THÊM KINH PHÍ ĐỂ TỔ CHỨC TRẠI VÀ MỞ CÁC KHÓA SẮP TỚI" 
            FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
-           HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="952" Margin="0,114,0,0" RenderTransformOrigin="0.5,1.004"/>
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="944" Margin="204,126,0,0" RenderTransformOrigin="0.5,1.004"/>
         <Image x:Name="image1" Grid.Row="1" Grid.Column="0" Source="Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Opacity="0.2"/>
-        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="17,22,1011,22" />
+        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="18,10,987,10" />
         <!--<Image x:Name="image3" Grid.Row="1" Grid.Column="1" Source="Images/BDH.jpg" RenderTransformOrigin="0.5,0.5"/>-->
-        <Ellipse Grid.Column="1" Margin="601,15,206,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+        <Ellipse Grid.Column="1" Margin="644,15,163,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -148,7 +148,7 @@
             Text="Pooraka Memorial Hall - 39 Scott St Pooraka SA 5095&#xA;Thứ Bảy 03-08-2024 Từ 06:30PM - 10:30PM &#xA;Lưu ý: Khi đi nhớ mang theo vé để vào cửa." 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="818,60,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="82" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Ellipse Grid.Column="1" Margin="311,15,496,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+        <Ellipse Grid.Column="1" Margin="339,15,468,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
