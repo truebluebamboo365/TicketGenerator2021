@@ -16,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Drawing
 {
@@ -25,7 +28,8 @@ namespace Drawing
     public partial class MainWindow : Window
     {
         public static char c1 = 'A';
-        int ticketNum = 5001;
+        static int ticketPrintingSequence = 241;
+        static int tableNumber = 1;
         public MainWindow()
         {
             InitializeComponent();
@@ -43,10 +47,106 @@ namespace Drawing
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            PrepareData();
+            //PrepareDataFor2kTickets();
+            PrepareDataFor240Tickets();
         }
 
-        private async void PrepareData()
+        private async void PrepareDataFor240Tickets()
+        {
+            //10 x 24 = 240 tickets
+            int[,] array = new int[10, 24];
+            for (int i = 0; i < 24; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    int y = 10 * i + 1 + j;
+                    array[j, i] = y;
+                }
+            }
+
+            //240 tickets divide by 4 will have 60 pages
+            int[,] newArray = new int[60, 4];
+            int k = 0;
+            int newIndex = 0;
+            for (int j = 0; j < 10; j++)
+            {
+                for (int i = 0; i < 24; i++)
+                {
+                    newArray[newIndex, k] = array[j, i];
+                    k++;
+                    if ((i + 1) % 4 == 0)
+                    {
+                        k = 0;
+                        newIndex++;
+                    }
+                }
+            }
+
+            //Sorted so that when cutting 10 pages at once they are in their own pack
+            //Sorted list is cool
+            SortedList sl = new SortedList();
+
+            for (int n = 0; n < newIndex; n++)
+            {
+                string temp = "";
+                string sortedTemp = "";
+                for (int m = 0; m < 4; m++)
+                {
+                    if (m < 3)
+                        temp += newArray[n, m].ToString("d3") + ",";
+                    else
+                        temp += newArray[n, m].ToString("d3");
+                    if (m == 0)
+                        sortedTemp = newArray[n, m].ToString("d3") + "";
+                }
+                sl.Add(sortedTemp, temp);
+
+                temp = "";
+                sortedTemp = "";
+            }
+
+            ICollection key = sl.Keys;
+            foreach (string s in key)
+            {
+                //Console.WriteLine(s + ": " + sl[s]);
+
+                string myStr = sl[s].ToString();
+                List<int> TagIds = myStr.Split(',').Select(int.Parse).ToList();
+
+                //for (int i = 241; i <= 250; i++)
+                foreach (int ch in TagIds)
+                {
+                    int NewTicketNo = ch;
+                    //int NewTicketNo = i;
+                    //Console.WriteLine(ch.ToString("d4"));
+                    //Print out 200 tickets at the time
+                    //if (NewTicketNo > 240)
+                    if (NewTicketNo == 248 || NewTicketNo == 250 )
+                    //    NewTicketNo == 186 || NewTicketNo == 127 ||
+                    //    NewTicketNo == 78 || NewTicketNo == 167 ||
+                    //    NewTicketNo == 229 || NewTicketNo == 197 ||
+                    //    NewTicketNo == 234 || NewTicketNo == 236)
+                    //if (NewTicketNo == 6466)
+                    {
+                        await Task.Run(() => PrintingTicket(NewTicketNo));
+                        //await Task.Run(() => ConfirmTicket(NewTicketNo));
+                        await Task.Run(() => SaveTicket(NewTicketNo));
+                        //System.Threading.Thread.Sleep(50);
+                        //System.Threading.Thread.Sleep(10);
+                    }
+                    ticketPrintingSequence++;
+
+                    //if (seatNumber > 10)
+                    //{
+                    //    tableNumber++;
+                    //    seatNumber = 1;
+                    //}
+                }
+            }
+
+            //MessageBox.Show("Done!");
+        }
+        private async void PrepareDataFor2kTickets()
         {
             //10 x 200 = 2000 tickets
             int[,] array = new int[10, 200];
@@ -124,14 +224,15 @@ namespace Drawing
                         //System.Threading.Thread.Sleep(50);
                         //System.Threading.Thread.Sleep(10);
                     }
-                    ticketNum++;
+                    ticketPrintingSequence++;
                 }
             }
         }
+
         private async void PrintingTicket(int ticketNo)
         {
             // Ticket numbers
-            string tickNo = String.Format("No. {0}", ticketNo.ToString("D4"));
+            string tickNo = String.Format("Số vé: {0}", ticketNo.ToString("D3"));
             lblTicketNoLeft.Dispatcher.Invoke(() =>
             {
                 // UI operation goes inside of Invoke
@@ -144,7 +245,6 @@ namespace Drawing
                 lblTicketNoRight.Content = tickNo;
             });
 
-            await Task.Delay(10);
             // CPU-bound or I/O-bound operation goes outside of Invoke
 
             //lblTicketNoLeft.Content = tickNo;
@@ -152,17 +252,24 @@ namespace Drawing
             //lblTicketNoRight.Content = tickNo;
             //lblTicketNoRight.Refresh();
 
-            //// Table numbers
-            //string tableNo = TableNumbering(ticketNo);
+            // Table numbers
+            TableNumbering(ticketNo);
+            string tableNo = String.Format("Số bàn: {0}", tableNumber.ToString("D2"));
             //string tableNo = ticketNo.ToString();
-            ////Console.WriteLine(tableNo);
-            //lblTableNoLeft.Content = String.Format("Số bàn: {0}", tableNo);
-            //lblTableNoLeft.Refresh();
-            //lblTableNoRight.Content = String.Format("Số bàn: {0}", tableNo);
-            //lblTableNoRight.Refresh();
+            //Console.WriteLine(tableNo);
+            lblTableNoLeft.Dispatcher.Invoke(() =>
+            {
+                // UI operation goes inside of Invoke
+                lblTableNoLeft.Content = tableNo;
+            });
 
+            lblTableNoRight.Dispatcher.Invoke(() =>
+            {
+                // UI operation goes inside of Invoke
+                lblTableNoRight.Content = tableNo;
+            });
 
-
+            await Task.Delay(10);
         }
 
         private void ConfirmTicket(int ticketNo)
@@ -203,7 +310,10 @@ namespace Drawing
                 PngBitmapEncoder pngImage = new PngBitmapEncoder();
                 pngImage.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
                 //using (System.IO.Stream fileStream = File.Create(@"C:\Users\QC\Documents\Kangen Water\Tickets\Ticket" + i.ToString("D4") + ".png"))
-                using (System.IO.Stream fileStream = File.Create(@"C:\Temp\Tickets\Ticket" + ticketNum.ToString("D4") + " - " + ticketNo.ToString("D4") + ".png"))
+                using (System.IO.Stream fileStream = File.Create(@"C:\Temp\NewTickets\Ticket" + " - " +
+                    ticketPrintingSequence.ToString("D3") + " - " +
+                    tableNumber.ToString("D2") + " - " +
+                    ticketNo.ToString("D3") + ".png"))
                 {
                     pngImage.Save(fileStream);
                 }
@@ -211,7 +321,24 @@ namespace Drawing
             await Task.Delay(10);
         }
 
-        private static string TableNumbering(int ticketNo)
+        private static void TableNumbering(int ticketNo)
+        {
+            if (ticketNo % 10 == 0) 
+            {
+                tableNumber = ticketNo / 10;
+            }
+            else 
+            {
+                tableNumber = ticketNo / 10 + 1;
+            }
+        }
+
+        private static int GetPlace(int value, int place)
+        {
+            return (value % (place * 10)) - (value % place);
+        }
+
+        private static string ComplexTableNumbering(int ticketNo)
         {
             // Ticket numbers
             // Table numbers

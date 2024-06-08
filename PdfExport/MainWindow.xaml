@@ -1,0 +1,12 @@
+﻿<Window x:Class="PdfExport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PdfExport"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="161" Width="345" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid Margin="0,0,607,347">
+        <Button Content="Button" HorizontalAlignment="Left" Height="21" Margin="47,65,0,0" VerticalAlignment="Top" Width="199" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
+    </Grid>
+</Window>

@@ -94,17 +94,17 @@
 
 
         <Label Grid.Row="2" x:Name="lblTicketNoLeft" 
-               Content="Số vé: 200" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Content="Số vé: 300" HorizontalAlignment="Center" VerticalAlignment="Top" 
                Margin="0,50,0,0" FontSize="24" FontWeight="Bold" Height="45" Width="136" Foreground="#FFD55A0E"/>
         <Label Grid.Row="2" x:Name="lblTableNoLeft" 
-               Content="Số bàn: 20" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Content="Số bàn: 30" HorizontalAlignment="Center" VerticalAlignment="Top" 
                Margin="0,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E"/>
 
         <Label Grid.Column="1" Grid.Row="2" x:Name="lblTicketNoRight" 
-               Content="Số vé: 200" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Content="Số vé: 300" HorizontalAlignment="Left" VerticalAlignment="Top" 
                Margin="28,50,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
         <Label Grid.Column="1" Grid.Row="2" x:Name="lblTableNoRight" 
-               Content="Số bàn: 20" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Content="Số bàn: 30" HorizontalAlignment="Left" VerticalAlignment="Top" 
                Margin="28,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
 
         <Label Grid.Column="1" Grid.RowSpan="3" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" 
@@ -145,9 +145,9 @@
             </Ellipse.Fill>
         </Ellipse>
         <TextBlock Grid.Column="1" Grid.Row="2"
-            Text="Pooraka Memorial Hall - 39 Scott St Pooraka SA 5095&#xA;Thứ Bảy 03-08-2024 Từ 06:30PM - 10:30PM &#xA;Lưu ý: Khi đi nhớ mang theo vé để vào cửa." 
+            Text="Pooraka Memorial Hall - 39 Scott St Pooraka SA 5095&#xA;Thứ Bảy 03-08-2024 Từ 06:30PM - 10:30PM &#xA;Xin phúc đáp trước ngày 27/07/2024 &#xA;Lưu ý: Khi đi nhớ mang theo vé để vào cửa." 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
-            Margin="818,60,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="82" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            Margin="818,50,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="102" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Ellipse Grid.Column="1" Margin="339,15,468,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>

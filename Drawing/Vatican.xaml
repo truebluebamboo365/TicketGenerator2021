@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drawing"
         mc:Ignorable="d"
-        Title="ThoiSuBanner" Height="550" Width="1920">
-    <Window.Background>
+        Title="ThoiSuBanner" Height="950" Width="2120">
+    <!--<Window.Background>
         <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
             <LinearGradientBrush.RelativeTransform>
                 <TransformGroup>
@@ -21,7 +21,9 @@
             <GradientStop Color="#FFFA8415" Offset="0.708"/>
             <GradientStop Color="#FF1D00FF" Offset="1"/>
         </LinearGradientBrush>
+    </Window.Background>-->
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/HieuDung.jpg" TileMode="Tile" Opacity="1"/>
     </Window.Background>
-    <Image HorizontalAlignment="Center" Height="477" VerticalAlignment="Top" Width="892" Source="Images/Fear-in-Rome_810_500_55_s_c1.jpg" Margin="0,21,0,0" Stretch="Fill"/>
 </Window>
 
