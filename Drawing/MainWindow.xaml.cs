@@ -28,7 +28,7 @@ namespace Drawing
     public partial class MainWindow : Window
     {
         public static char c1 = 'A';
-        static int ticketPrintingSequence = 241;
+        static int ticketPrintingSequence = 1;
         static int tableNumber = 1;
         public MainWindow()
         {
@@ -121,7 +121,7 @@ namespace Drawing
                     //Console.WriteLine(ch.ToString("d4"));
                     //Print out 200 tickets at the time
                     //if (NewTicketNo > 240)
-                    if (NewTicketNo == 248 || NewTicketNo == 250 )
+                    //if (NewTicketNo == 248 || NewTicketNo == 250 )
                     //    NewTicketNo == 186 || NewTicketNo == 127 ||
                     //    NewTicketNo == 78 || NewTicketNo == 167 ||
                     //    NewTicketNo == 229 || NewTicketNo == 197 ||
@@ -269,7 +269,7 @@ namespace Drawing
                 lblTableNoRight.Content = tableNo;
             });
 
-            await Task.Delay(10);
+            await Task.Delay(100);
         }
 
         private void ConfirmTicket(int ticketNo)

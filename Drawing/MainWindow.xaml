@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Kengen Water" Height="630" Width="1702"  Foreground="#FFCB00FF" BorderBrush="#FF101011" Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown" AllowsTransparency="True" WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="Images/Church_background_8.png" TileMode="Tile" Opacity="1"/>
+        <ImageBrush ImageSource="/Images/Church_background_8.png" TileMode="Tile" Opacity="1"/>
     </Window.Background>
     <Grid >
         <Grid.ColumnDefinitions>
@@ -74,10 +74,10 @@
         </Ellipse>
         <TextBlock Text="  CHƯƠNG TRÌNH THĂNG TIẾN&#xA;HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
                    FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Margin="0,16,0,0" Width="329"/>
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Margin="0,29,0,0" Width="329"/>
         <TextBlock Text="CĐCGVN - NAM ÚC&#xA;    TGP ADELAIDE" 
                    FontSize="20" Foreground="#FF6280C5" FontWeight="Bold" 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Margin="80,85,0,0" Width="199"/>
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Margin="80,90,0,0" Width="199"/>
 
         <Label Grid.Row="1" 
                Content="Tên: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" 
@@ -107,29 +107,29 @@
                Content="Số bàn: 30" HorizontalAlignment="Left" VerticalAlignment="Top" 
                Margin="28,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
 
-        <Label Grid.Column="1" Grid.RowSpan="3" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" 
-               HorizontalAlignment="Left" Height="622" Margin="0,0,0,0" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
+        <Label Grid.Column="1" Grid.RowSpan="3" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" 
+               HorizontalAlignment="Left" Height="610" Margin="0,10,0,0" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
 
         <TextBlock Grid.Column="1" Grid.Row="2"
             Text="Một bữa cơm thân mật để gặp gỡ giao lưu tạo thêm tình thân!&#xA;Một chương trình văn nghệ góp vui thật đặc sắc!&#xA;Có phần đấu giá và xổ số may mắn!" 
                    HorizontalAlignment="Left" VerticalAlignment="Top" 
-               Margin="231,60,0,0" Foreground="#FF7A0829" Width="547" FontSize="18" Height="72" Background="{x:Null}" FontWeight="Bold"/>
+               Margin="231,52,0,0" Foreground="#FF7A0829" Width="547" FontSize="18" Height="72" Background="{x:Null}" FontWeight="Bold"/>
 
 
         <TextBlock Grid.Column="1" 
                    Text="CHƯƠNG TRÌNH THĂNG TIẾN HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
                    FontSize="30" Foreground="#FFFF2800" FontWeight="Bold" 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="914" Margin="204,22,0,0"/>
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="914" Margin="204,28,0,0"/>
         <TextBlock Grid.Column="1" 
            Text="TỔNG GIÁO PHẬN ADELAIDE" 
            FontSize="26" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="426" Margin="448,73,0,0"/>
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="426" Margin="448,80,0,0"/>
+        <Image x:Name="image1" Grid.Row="1" Grid.Column="0" Source="Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Opacity="0.2" Margin="11,0,0,0"/>
         <TextBlock Grid.Column="1" 
            Text="BỮA CƠM GÂY QUỸ NHẰM CÓ THÊM KINH PHÍ ĐỂ TỔ CHỨC TRẠI VÀ MỞ CÁC KHÓA SẮP TỚI" 
            FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
            HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="944" Margin="204,126,0,0" RenderTransformOrigin="0.5,1.004"/>
-        <Image x:Name="image1" Grid.Row="1" Grid.Column="0" Source="Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Opacity="0.2"/>
-        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="18,10,987,10" />
+        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="18,29,999,8" />
         <!--<Image x:Name="image3" Grid.Row="1" Grid.Column="1" Source="Images/BDH.jpg" RenderTransformOrigin="0.5,0.5"/>-->
         <Ellipse Grid.Column="1" Margin="644,15,163,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
@@ -147,7 +147,7 @@
         <TextBlock Grid.Column="1" Grid.Row="2"
             Text="Pooraka Memorial Hall - 39 Scott St Pooraka SA 5095&#xA;Thứ Bảy 03-08-2024 Từ 06:30PM - 10:30PM &#xA;Xin phúc đáp trước ngày 27/07/2024 &#xA;Lưu ý: Khi đi nhớ mang theo vé để vào cửa." 
             HorizontalAlignment="Left" VerticalAlignment="Top" 
-            Margin="818,50,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="102" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
+            Margin="818,42,0,0" Foreground="#FF7A0829" Width="474" FontSize="18" Height="102" Background="{x:Null}" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Ellipse Grid.Column="1" Margin="339,15,468,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
@@ -174,11 +174,11 @@
                 <ImageBrush ImageSource="/Images/TTHN_Large_Group.jpg" />
             </Ellipse.Fill>
         </Ellipse>
-        <Image x:Name="image2_Copy" Grid.Row="0" Grid.Column="1" Source="/Images/Logo.png" RenderTransformOrigin="0.5,0.5" Margin="1154,34,14,22" Grid.ColumnSpan="2" />
+        <Image x:Name="image2_Copy" Grid.Row="0" Grid.Column="1" Source="/Images/Logo.png" RenderTransformOrigin="0.5,0.5" Margin="1154,51,14,29" Grid.ColumnSpan="2" />
         <TextBlock Grid.Column="2" Grid.Row="0" 
            Text="CỘNG ĐỒNG CÔNG GIÁO" 
            FontSize="12" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="144" Margin="10,16,0,0" RenderTransformOrigin="0.5,0.5">
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="144" Margin="10,27,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1"/>
