@@ -74,10 +74,10 @@
         </Ellipse>
         <TextBlock Text="  CHƯƠNG TRÌNH THĂNG TIẾN&#xA;HÔN NHÂN GIA ĐÌNH - NAM ÚC" 
                    FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Margin="0,29,0,0" Width="329"/>
-        <TextBlock Text="CĐCGVN - NAM ÚC&#xA;    TGP ADELAIDE" 
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Margin="0,37,0,0" Width="329"/>
+        <TextBlock Text="TGP ADELAIDE" 
                    FontSize="20" Foreground="#FF6280C5" FontWeight="Bold" 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Margin="80,90,0,0" Width="199"/>
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Margin="108,103,0,0" Width="152"/>
 
         <Label Grid.Row="1" 
                Content="Tên: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" 
@@ -94,18 +94,33 @@
 
 
         <Label Grid.Row="2" x:Name="lblTicketNoLeft" 
-               Content="Số vé: 300" HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Content="Số vé:" HorizontalAlignment="Center" VerticalAlignment="Top" 
                Margin="0,50,0,0" FontSize="24" FontWeight="Bold" Height="45" Width="136" Foreground="#FFD55A0E"/>
+        <Label Grid.Row="2" x:Name="txtTicketNoLeft" 
+               Content="{Binding TicketNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="217,50,0,0" FontSize="24" FontWeight="Bold" Height="45" Width="73" Foreground="#FFD55A0E" RenderTransformOrigin="0.5,0.5">
+        </Label>
+
         <Label Grid.Row="2" x:Name="lblTableNoLeft" 
-               Content="Số bàn: 30" HorizontalAlignment="Center" VerticalAlignment="Top" 
-               Margin="0,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E"/>
+               Content="Số bàn:" VerticalAlignment="Top" 
+               Margin="118,95,164,0" FontSize="24" FontWeight="Bold" Height="47" Width="100" Foreground="#FFD55A0E"/>
+        <Label Grid.Row="2" x:Name="txtTableNoLeft" 
+               Content="{Binding TableNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="217,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="73" Foreground="#FFD55A0E"/>
 
         <Label Grid.Column="1" Grid.Row="2" x:Name="lblTicketNoRight" 
-               Content="Số vé: 300" HorizontalAlignment="Left" VerticalAlignment="Top" 
-               Margin="28,50,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
+               Content="Số vé:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="28,50,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="85" Foreground="#FFD55A0E" />
+        <Label Grid.Column="1" Grid.Row="2" x:Name="txtTicketNoRight" 
+               Content="{Binding TicketNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="130,52,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="93" Foreground="#FFD55A0E" />
+
         <Label Grid.Column="1" Grid.Row="2" x:Name="lblTableNoRight" 
-               Content="Số bàn: 30" HorizontalAlignment="Left" VerticalAlignment="Top" 
-               Margin="28,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="140" Foreground="#FFD55A0E" />
+               Content="Số bàn:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="28,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="100" Foreground="#FFD55A0E" />
+        <Label Grid.Column="1" Grid.Row="2" x:Name="txtTableNoRight" 
+               Content="{Binding TableNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="130,95,0,0" FontSize="24" FontWeight="Bold" Height="47" Width="88" Foreground="#FFD55A0E" />
 
         <Label Grid.Column="1" Grid.RowSpan="3" Content="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|" 
                HorizontalAlignment="Left" Height="610" Margin="0,10,0,0" VerticalAlignment="Top" Width="16" FontSize="14" Foreground="#FF2A2727"/>
@@ -123,13 +138,17 @@
         <TextBlock Grid.Column="1" 
            Text="TỔNG GIÁO PHẬN ADELAIDE" 
            FontSize="26" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="426" Margin="448,80,0,0"/>
+           HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="426" Margin="448,77,0,0"/>
         <Image x:Name="image1" Grid.Row="1" Grid.Column="0" Source="Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Opacity="0.2" Margin="11,0,0,0"/>
         <TextBlock Grid.Column="1" 
            Text="BỮA CƠM GÂY QUỸ NHẰM CÓ THÊM KINH PHÍ ĐỂ TỔ CHỨC TRẠI VÀ MỞ CÁC KHÓA SẮP TỚI" 
            FontSize="21" Foreground="#FFFF2800" FontWeight="Bold" 
            HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="944" Margin="204,126,0,0" RenderTransformOrigin="0.5,1.004"/>
-        <Image x:Name="image2" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="18,29,999,8" />
+        <Image x:Name="image2" Cursor="Hand" Grid.Row="0" Grid.Column="1" Source="Images/TTHN Logo.png" RenderTransformOrigin="0.5,0.5" Margin="18,29,999,8" >
+            <!--<Image.InputBindings>
+                <MouseBinding Gesture="LeftClick" Command="{Binding PrintTicketCommand, Mode=OneTime}" />
+            </Image.InputBindings>-->
+        </Image>
         <!--<Image x:Name="image3" Grid.Row="1" Grid.Column="1" Source="Images/BDH.jpg" RenderTransformOrigin="0.5,0.5"/>-->
         <Ellipse Grid.Column="1" Margin="644,15,163,132" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
             <Ellipse.RenderTransform>
@@ -174,32 +193,22 @@
                 <ImageBrush ImageSource="/Images/TTHN_Large_Group.jpg" />
             </Ellipse.Fill>
         </Ellipse>
-        <Image x:Name="image2_Copy" Grid.Row="0" Grid.Column="1" Source="/Images/Logo.png" RenderTransformOrigin="0.5,0.5" Margin="1154,51,14,29" Grid.ColumnSpan="2" />
-        <TextBlock Grid.Column="2" Grid.Row="0" 
-           Text="CỘNG ĐỒNG CÔNG GIÁO" 
-           FontSize="12" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="144" Margin="10,27,0,0" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
+        <!--<Image Margin="17,33,27,1" x:Name="image2_Copy" Grid.Row="0" Grid.Column="1" Source="/Images/HolyFamily5.jpg" RenderTransformOrigin="0.5,0.5" Margin="1154,29,14,10" Grid.ColumnSpan="2" />-->
+        <Ellipse Margin="17,33,27,1" RenderTransformOrigin="0.5,0.5" Grid.Row="0" Grid.Column="2" StrokeThickness="2">
+            <Ellipse.Stroke>
+                <SolidColorBrush x:Name="StrokeColor" Color="#FF6280C5"/>
+            </Ellipse.Stroke>
+            <Ellipse.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.67" AngleX="0.602"/>
                     <RotateTransform/>
-                    <TranslateTransform/>
+                    <TranslateTransform Y="-2.807" X="1.093"/>
                 </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="0" 
-           Text="VIỆT NAM - NAM ÚC" 
-           FontSize="12" Foreground="#FF6280C5" FontWeight="Bold" 
-           HorizontalAlignment="Center" VerticalAlignment="Top" Height="18" Width="130" Margin="0,140,0,0" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/Images/HolyFamily5.jpg"/>
+            </Ellipse.Fill>
+        </Ellipse>
     </Grid>
 </Window>

@@ -27,22 +27,27 @@ namespace Drawing
     /// </summary>
     public partial class MainWindow : Window
     {
+        TicketViewModel viewModel;
         public static char c1 = 'A';
         static int ticketPrintingSequence = 1;
         static int tableNumber = 1;
         public MainWindow()
         {
             InitializeComponent();
+            
+            viewModel = new TicketViewModel();
+
+            //txtTableNoRight.OnChanged += new RoutedEventHandler(ButtonCreatedByCode_Click);
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            //MainWindow window = new MainWindow();
+            this.DataContext = viewModel;
+            //window.Show();
+            //this.DataContext = TicketViewModel();
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -116,31 +121,41 @@ namespace Drawing
                 //for (int i = 241; i <= 250; i++)
                 foreach (int ch in TagIds)
                 {
+                    //int NewTicketNo = ch;
+
                     int NewTicketNo = ch;
+
                     //int NewTicketNo = i;
                     //Console.WriteLine(ch.ToString("d4"));
                     //Print out 200 tickets at the time
                     //if (NewTicketNo > 240)
-                    //if (NewTicketNo == 248 || NewTicketNo == 250 )
-                    //    NewTicketNo == 186 || NewTicketNo == 127 ||
-                    //    NewTicketNo == 78 || NewTicketNo == 167 ||
-                    //    NewTicketNo == 229 || NewTicketNo == 197 ||
-                    //    NewTicketNo == 234 || NewTicketNo == 236)
-                    //if (NewTicketNo == 6466)
+                    //if (NewTicketNo == 149)
+                    //if (NewTicketNo == 9)
                     {
-                        await Task.Run(() => PrintingTicket(NewTicketNo));
+                        //await Task.Run(() => PrintingTicket(NewTicketNo));
                         //await Task.Run(() => ConfirmTicket(NewTicketNo));
+
+                        viewModel.TicketNo = String.Format("{0}", NewTicketNo.ToString("D3"));
+                        TableNumbering(NewTicketNo);
+                        viewModel.TableNo = String.Format("  {0}", tableNumber.ToString("D2"));
+                        
+                        await Task.Delay(100);
+
                         await Task.Run(() => SaveTicket(NewTicketNo));
                         //System.Threading.Thread.Sleep(50);
                         //System.Threading.Thread.Sleep(10);
                     }
                     ticketPrintingSequence++;
+                    //ticketPrintingSequence = i;
 
                     //if (seatNumber > 10)
                     //{
                     //    tableNumber++;
                     //    seatNumber = 1;
                     //}
+
+                    //if (ticketPrintingSequence > 40)
+                    //    return;
                 }
             }
 
@@ -229,21 +244,21 @@ namespace Drawing
             }
         }
 
-        private async void PrintingTicket(int ticketNo)
+        private async Task PrintingTicket(int ticketNo)
         {
             // Ticket numbers
             string tickNo = String.Format("Số vé: {0}", ticketNo.ToString("D3"));
-            lblTicketNoLeft.Dispatcher.Invoke(() =>
-            {
-                // UI operation goes inside of Invoke
-                lblTicketNoLeft.Content = tickNo;
-            });
+            //lblTicketNoLeft.Dispatcher.Invoke(() =>
+            //{
+            //    // UI operation goes inside of Invoke
+            //    lblTicketNoLeft.Content = tickNo;
+            //});
 
-            lblTicketNoRight.Dispatcher.Invoke(() =>
-            {
-                // UI operation goes inside of Invoke
-                lblTicketNoRight.Content = tickNo;
-            });
+            //lblTicketNoRight.Dispatcher.Invoke(() =>
+            //{
+            //    // UI operation goes inside of Invoke
+            //    lblTicketNoRight.Content = tickNo;
+            //});
 
             // CPU-bound or I/O-bound operation goes outside of Invoke
 
@@ -254,22 +269,23 @@ namespace Drawing
 
             // Table numbers
             TableNumbering(ticketNo);
+            //viewModel.TableNo = tableNumber;
             string tableNo = String.Format("Số bàn: {0}", tableNumber.ToString("D2"));
             //string tableNo = ticketNo.ToString();
             //Console.WriteLine(tableNo);
-            lblTableNoLeft.Dispatcher.Invoke(() =>
-            {
-                // UI operation goes inside of Invoke
-                lblTableNoLeft.Content = tableNo;
-            });
+            //lblTableNoLeft.Dispatcher.Invoke(() =>
+            //{
+            //    // UI operation goes inside of Invoke
+            //    lblTableNoLeft.Content = tableNo;
+            //});
 
-            lblTableNoRight.Dispatcher.Invoke(() =>
-            {
-                // UI operation goes inside of Invoke
-                lblTableNoRight.Content = tableNo;
-            });
+            //lblTableNoRight.Dispatcher.Invoke(() =>
+            //{
+            //    // UI operation goes inside of Invoke
+            //    lblTableNoRight.Content = tableNo;
+            //});
 
-            await Task.Delay(100);
+            await Task.Delay(10);
         }
 
         private void ConfirmTicket(int ticketNo)
@@ -299,7 +315,7 @@ namespace Drawing
             }
         }
 
-            private async void SaveTicket(int ticketNo)
+            private async Task SaveTicket(int ticketNo)
         {
             this.Dispatcher.Invoke(() =>
             {
@@ -310,7 +326,7 @@ namespace Drawing
                 PngBitmapEncoder pngImage = new PngBitmapEncoder();
                 pngImage.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
                 //using (System.IO.Stream fileStream = File.Create(@"C:\Users\QC\Documents\Kangen Water\Tickets\Ticket" + i.ToString("D4") + ".png"))
-                using (System.IO.Stream fileStream = File.Create(@"C:\Temp\NewTickets\Ticket" + " - " +
+                using (System.IO.Stream fileStream = File.Create(@"C:\Temp\ViewModel\Ticket" + " - " +
                     ticketPrintingSequence.ToString("D3") + " - " +
                     tableNumber.ToString("D2") + " - " +
                     ticketNo.ToString("D3") + ".png"))

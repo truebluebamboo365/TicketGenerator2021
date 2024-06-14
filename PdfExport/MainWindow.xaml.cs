@@ -28,14 +28,22 @@ namespace PdfExport
         }
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            string filepath = "C:\\Temp\\ViewModel\\";
+            string filename = filepath + "Tickets.pdf";
+
             iTextSharp.text.Document document = new iTextSharp.text.Document();
-            PdfWriter.GetInstance(document, new FileStream("MyPDF.pdf", FileMode.Create));
+            //PdfWriter.GetInstance(document, new FileStream("MyPDF.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream(filename, FileMode.Create));
             document.Open();
 
-            string filepath = "C:\\Temp\\Tickets";
+
+            //DirectoryInfo dir = new DirectoryInfo(folderpath);
+
+            //FileInfo[] files = dir.GetFiles().OrderByDescending(p => p.CreationTime).ToArray();
+
             DirectoryInfo d = new DirectoryInfo(filepath);
 
-            foreach (var file in d.GetFiles("*.PNG"))
+            foreach (var file in d.GetFiles("*.PNG").OrderBy(p => p.CreationTime))
             {
                 //Directory.Move(file.FullName, filepath + "\\TextFiles\\" + file.Name);
                 iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(file.FullName);
